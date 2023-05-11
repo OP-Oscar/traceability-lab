@@ -1,0 +1,38 @@
+* {
+    font-family: sans-serif;
+}
+
+
+
+body {
+    margin: auto;
+    width: 640px; 
+    padding: 50px;
+    font-family: 'Arial', sans-serif; 
+    color: #33475b;    
+  }
+  
+  /* Centered Image Code */
+  
+  img {
+    display: block;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  
+button {
+    background-color: black;
+    color: white;
+    border: none;
+    border-right: 2px solid aqua;
+    border-bottom: 2px solid aqua;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+p {
+    width: 50%;
+}
