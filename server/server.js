@@ -17,9 +17,9 @@ const {getAllMovies, createMovie, deleteMovie, updateMovie} = userController;
 //routes 
 // app.get(`/`,(req,res)=>{res.sendFile(path.join(__dirname, `../public/index.html`))
 // })
-app.get('/', (req, res) => res.send('Hello...new route worked?  '));
-
-app.get(`/api/movies`, getAllMovies);
+// app.get('/', (req, res) => res.send('Hello...new route worked?  '));
+app.get(`/`, getAllMovies);
+// app.get(`/api/movies`, getAllMovies);
 app.post(`/api/movies`, createMovie);
 app.delete(`/api/movies/:movie_id`, deleteMovie)
 app.put(`/api/movies/:movie_id`, updateMovie )
