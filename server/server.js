@@ -19,7 +19,10 @@ const {getAllMovies, createMovie, deleteMovie, updateMovie} = userController;
 // })
 // app.get('/', (req, res) => res.send('Hello...new route worked?  '));
 
-app.get(`${__dirname}/api/movies`, getAllMovies);
+app.get(`${__dirname}/api/movies`, ()=>{
+    console.log(`dirname is coming up as ${__dirname}`)
+    console.log(`get back end runs and seems stops here`)
+    getAllMovies});
 app.post(`${__dirname}/api/movies`, createMovie);
 app.delete(`${__dirname}/api/movies/:movie_id`, deleteMovie)
 app.put(`${__dirname}/api/movies/:movie_id`, updateMovie )
