@@ -9,7 +9,7 @@ btn.addEventListener('click', clickHandler)
 const moviesContainer = document.querySelector('#movies-container')
 const form = document.querySelector('form')
 
-const baseURL = `http://localhost:4000/api/movies`
+const baseURL = `./api/movies`
 // const baseURL = `${__dirname}/api/movies`
 
 
