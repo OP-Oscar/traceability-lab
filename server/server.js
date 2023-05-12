@@ -15,8 +15,9 @@ const {getAllMovies, createMovie, deleteMovie, updateMovie} = userController;
 // const {createMovie} = userController; // => you can do it seperate
 
 //routes 
-app.get(`/`,(req,res)=>{res.sendFile(path.join(__dirname, `../public/index.html`))
-})
+// app.get(`/`,(req,res)=>{res.sendFile(path.join(__dirname, `../public/index.html`))
+// })
+
 app.get(`/api/movies`, getAllMovies);
 app.post(`/api/movies`, createMovie);
 app.delete(`/api/movies/:movie_id`, deleteMovie)
