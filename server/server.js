@@ -26,7 +26,7 @@ app.post(`/api/movies`, createMovie);
 app.delete(`/api/movies/:movie_id`, deleteMovie)
 app.put(`/api/movies/:movie_id`, updateMovie )
 
-
+app.get('/index.html', function (req, res) {   res.sendFile( __dirname + "/" + "index.html" );})
 
 //confirmation
 app.listen(4000, () => console.log('server running on 4000'))
