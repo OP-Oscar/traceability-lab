@@ -10,7 +10,7 @@ app.use(cors())
 app.use(express.json());
 app.use(express.static(`${__dirname}/public`)); //=>dirname brings working directory file index.html
 console.log(`dirname back end line 12 is ${__dirname}`)
-
+console.log(`filename pathing is ${path.join(__dirname,`..`, `/public/index.html`)}`)
 
 const userController = require('./controllers/userController');
 
