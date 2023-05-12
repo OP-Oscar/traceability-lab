@@ -1,12 +1,12 @@
 //import
 const express = require('express')
-const cors = require('cors');
+// const cors = require('cors');
 
 //invoking
 const app = express();
 
 //middleware
-app.use(cors())
+// app.use(cors())
 app.use(express.json());
 app.use(express.static(`/public`)); //=>dirname brings working directory file index.html
 console.log(`dirname back end line 12 is ${__dirname}`)
