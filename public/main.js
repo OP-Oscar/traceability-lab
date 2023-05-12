@@ -9,9 +9,11 @@ btn.addEventListener('click', clickHandler)
 const moviesContainer = document.querySelector('#movies-container')
 const form = document.querySelector('form')
 
-// const baseURL = `http://localhost:4000/api/movies`
+const baseURL = `http://localhost:4000/api/movies`
 // const baseURL = `${__dirname}/api/movies`
-const baseURL = `/root/traceability-lab/public/index.html/api/movies`
+
+
+
 const moviesCallback = ({ data: movies }) => displayMovies(movies)
 const errCallback = err => console.log(err.response.data)
 
