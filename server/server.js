@@ -8,7 +8,7 @@ const app = express();
 //middleware
 // app.use(cors())
 app.use(express.json());
-app.use(express.static(`/public`)); //=>dirname brings working directory file index.html
+app.use(express.static(`public`)); //=>dirname brings working directory file index.html
 console.log(`dirname back end line 12 is ${__dirname}`)
 
 const userController = require('./controllers/userController');
