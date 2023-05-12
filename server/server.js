@@ -10,7 +10,7 @@ app.use(cors())
 app.use(express.json());
 app.use(express.static(`${__dirname}/public`)); //=>dirname brings working directory file index.html
 
-const userController = require('../controllers/userController');
+const userController = require('./controllers/userController');
 const {getAllMovies, createMovie, deleteMovie, updateMovie} = userController;
 // const {createMovie} = userController; // => you can do it seperate
 
