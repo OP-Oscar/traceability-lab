@@ -1,9 +1,10 @@
+//importing db data
 const db = require('../db.json');
 
 //make variables global in case future use
 let id = db.length;
 
-
+//exporting functions
 module.exports = {
     getAllMovies : (req,res) => {
         let allMovies = db;
@@ -51,6 +52,6 @@ module.exports = {
         res.status(200).send(db);
     }
 
-//add more logic
+//add more logic if additional tasks required
 };
 

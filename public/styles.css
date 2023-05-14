@@ -1,27 +1,36 @@
 * {
-    font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
-
 
 body {
     margin: auto;
-    width: 640px; 
-    padding: 50px;
     font-family: 'Arial', sans-serif; 
-    color: #33475b;    
+    color: #33475b;
+    background-color: lightgray; 
   }
   
-  /* Centered Image Code */
-  
+
   img {
     display: block;
-    width: 60%;
+    width: 200px; 
+    height: 300px;
     margin-left: auto;
     margin-right: auto;
   }
 
+  header {
+    height: 80px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
 
+main {
+  display: flex; 
+  justify-content: center;
+}
   
 button {
     background-color: black;
@@ -37,20 +46,16 @@ p {
     width: 50%;
 }
 
-main {
-  display: flex; 
-  justify-content: center;
-}
 
 form {
   width: 350px;
   height: 350px;
   background-color: blanchedalmond;
-  position: relative;
   display: flex; 
   flex-direction: column;
   justify-content: space-evenly; 
   align-items: center;
+  text-align: center;
   margin: 30px;
 }
 
@@ -102,11 +107,13 @@ input[type='text'] {
 
 .movie-title {
   font-size: 18px;
+  text-align: center;
   margin: 5px 0;
 }
 
 .movie-rating {
   font-size: 15px;
+  text-align: center;
   margin: 5px 0;
 }
 

@@ -1,27 +1,23 @@
+// query selectors
 const btn = document.querySelector('button')
-
-const clickHandler = () => alert('The cat name is: Rascal')
-
-btn.addEventListener('click', clickHandler)
-
-
-
 const moviesContainer = document.querySelector('#movies-container')
 const form = document.querySelector('form')
 
-const baseURL = `../api/movies`
-// const baseURL = `${__dirname}/api/movies`
+// const baseURL = `http://localhost:4000/api/movies` // => alternate way if specifying host.
+const baseURL = `../api/movies` //=>dynamic
 
-
-
+//callbacks
+const clickHandler = () => alert('The cat name is: Rascal')
 const moviesCallback = ({ data: movies }) => displayMovies(movies)
 const errCallback = err => console.log(err.response.data)
 
+//axios requests
 const getAllMovies = () => axios.get(baseURL).then(moviesCallback).catch(errCallback)
 const createMovie = body => axios.post(baseURL, body).then(moviesCallback).catch(errCallback)
 const deleteMovie = id => axios.delete(`${baseURL}/${id}`).then(moviesCallback).catch(errCallback)
 const updateMovie = (id, type) => axios.put(`${baseURL}/${id}`, {type}).then(moviesCallback).catch(errCallback)
 
+// function to handle new movies submitted
 function submitHandler(e) {
     e.preventDefault()
 
@@ -42,6 +38,7 @@ function submitHandler(e) {
     imageURL.value = ''
 }
 
+// create visuals function
 function createMovieCard(movie) {
     const movieCard = document.createElement('div')
     movieCard.classList.add('movie-card')
@@ -59,7 +56,7 @@ function createMovieCard(movie) {
 
     moviesContainer.appendChild(movieCard)
 }
-
+// iterate through movies in db to create visual for each
 function displayMovies(arr) {
     moviesContainer.innerHTML = ``
     for (let i = 0; i < arr.length; i++) {
@@ -67,6 +64,10 @@ function displayMovies(arr) {
     }
 }
 
+
+// event listeners
+btn.addEventListener('click', clickHandler)
 form.addEventListener('submit', submitHandler)
 
+//invoking
 getAllMovies()
